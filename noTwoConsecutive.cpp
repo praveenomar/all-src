@@ -8,13 +8,13 @@ int dp[1000];
 int solve(int n){
 	
 	if(n==1)
-	return 1;
+	return 2;
 	
 	if(n==0)
 	return 1;
 	
 	if(dp[n] == -1)
-	return dp[n] = 1 + solve(n-2) + solve(n-1);
+	return dp[n] = solve(n-2) + solve(n-1);
 	else
 	return dp[n];
 	
